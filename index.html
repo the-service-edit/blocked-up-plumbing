@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blocked Up Plumbing | Reliable Plumbers, Sydney North Shore</title>
+<meta name="description" content="Blocked Up Plumbing are your local plumbing specialists, licensed across Sydney's north shore. Blocked drains, hot water, leak detection and emergency plumbing. Call 0416 651 552.">
+
+<!-- ============================================================
+     BLOCKED UP PLUMBING  |  landing page
+     Brand: Navy #0D112B  ·  Cyan #47C4EE  ·  Grey #CCCCCC  ·  White
+     Built by The Service Edit
+     ------------------------------------------------------------
+     SWAP-IN CHECKLIST (search for "EDIT:"):
+       1. Replace the SVG monogram with the official BU logo file
+       2. Drop real photos into the .photo slots (see EDIT notes)
+       3. Confirm service list, suburbs and hours
+       4. Add your Web3Forms access key in the form (EDIT: form key)
+       5. Add real social / Google review links in the footer
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0D112B;
+  --navy-2:#141a3a;
+  --navy-3:#1c2450;
+  --cyan:#47C4EE;
+  --cyan-soft:#7ad6f4;
+  --grey:#CCCCCC;
+  --ink:#0D112B;
+  --muted:#5b6175;
+  --paper:#ffffff;
+  --paper-2:#f4f6fa;
+  --line:#e4e8f0;
+  --display:'Archivo',sans-serif;
+  --body:'Hanken Grotesk',sans-serif;
+  --maxw:1180px;
+  --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-family:var(--display);font-weight:700;font-size:.95rem;
+  letter-spacing:.01em;padding:15px 28px;border-radius:14px;
+  cursor:pointer;border:none;transition:.25s ease;white-space:nowrap;
+}
+.btn-cyan{background:var(--cyan);color:var(--navy)}
+.btn-cyan:hover{background:#62d0f5;transform:translateY(-2px);box-shadow:0 12px 30px rgba(71,196,238,.35)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-3);transform:translateY(-2px)}
+
+/* ---------- nav ---------- */
+header{
+  position:fixed;inset:0 0 auto 0;z-index:60;
+  transition:.3s ease;
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  height:84px;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.mono{width:42px;height:42px;flex:none}
+.logo-h{height:40px;width:auto;display:block;transition:.3s ease}
+header.scrolled .logo-h{height:34px}
+.logo-stacked{height:104px;width:auto;display:block;margin-bottom:6px}
+.brand-txt{font-family:var(--display);font-weight:900;color:#fff;line-height:1;
+  font-size:1.18rem;letter-spacing:.02em}
+.brand-txt span{display:block;font-size:.62rem;font-weight:600;letter-spacing:.42em;
+  color:var(--cyan);margin-top:3px}
+.navlinks{display:flex;gap:34px;align-items:center}
+.navlinks a{font-family:var(--display);font-weight:600;font-size:.92rem;color:rgba(255,255,255,.82);
+  transition:.2s;position:relative}
+.navlinks a:hover{color:#fff}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;
+  background:var(--cyan);transition:.25s}
+.navlinks a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.nav-phone{font-family:var(--display);font-weight:800;color:#fff;font-size:1rem;
+  display:flex;align-items:center;gap:8px}
+.nav-phone svg{width:18px;height:18px;stroke:var(--cyan)}
+/* scrolled state */
+header.scrolled{background:var(--navy);box-shadow:0 6px 30px rgba(0,0,0,.25)}
+header.scrolled .nav{height:68px}
+.burger{display:none;width:44px;height:44px;border:1.5px solid rgba(255,255,255,.3);
+  border-radius:12px;background:none;cursor:pointer;align-items:center;justify-content:center}
+.burger svg{stroke:#fff;width:22px;height:22px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;background:var(--navy);color:#fff;overflow:hidden;
+  padding:148px 0 0;
+}
+/* atmospheric brand texture + cyan glow */
+.hero::before{
+  content:"";position:absolute;inset:0;opacity:.5;
+  background:
+    radial-gradient(620px 480px at 88% 8%, rgba(71,196,238,.22), transparent 60%),
+    radial-gradient(500px 500px at 0% 100%, rgba(71,196,238,.10), transparent 60%);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;opacity:.06;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);
+  background-size:46px 46px;
+  mask-image:radial-gradient(circle at 70% 30%,#000,transparent 75%);
+}
+.hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+  min-height:560px;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--display);
+  font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--cyan);margin-bottom:22px;
+}
+h1{
+  font-family:var(--display);font-weight:900;line-height:.98;letter-spacing:-.02em;
+  font-size:clamp(2.7rem,5.4vw,4.6rem);margin-bottom:24px;
+}
+h1 em{font-style:normal;color:var(--cyan)}
+.hero p.lede{font-size:1.12rem;color:#c8cfe0;max-width:30em;margin-bottom:34px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+
+/* hero photo slot */
+.hero-photo{
+  position:relative;aspect-ratio:4/4.4;border-radius:24px;overflow:hidden;
+  /* EDIT: replace this gradient with the client's real hero photo:
+     background-image:url('hero.jpg'); background-size:cover; background-position:center; */
+  background:
+    linear-gradient(160deg,rgba(71,196,238,.18),transparent 55%),
+    linear-gradient(320deg,var(--navy-3),var(--navy-2));
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 40px 80px rgba(0,0,0,.4);
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-photo .ghost{opacity:.16}
+.hero-photo .ghost svg{width:160px;height:160px}
+.photo-tag{
+  position:absolute;left:18px;bottom:18px;font-family:var(--display);font-weight:700;
+  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);
+  background:rgba(13,17,43,.6);backdrop-filter:blur(6px);padding:7px 12px;border-radius:8px;
+}
+/* floating badge on photo */
+.float-badge{
+  position:absolute;right:-14px;top:30px;background:#fff;color:var(--navy);
+  border-radius:16px;padding:16px 20px;box-shadow:0 20px 40px rgba(0,0,0,.3);
+  display:flex;align-items:center;gap:13px;animation:bob 4s ease-in-out infinite;
+}
+.float-badge .star{width:40px;height:40px;border-radius:11px;background:var(--cyan);
+  display:flex;align-items:center;justify-content:center;flex:none}
+.float-badge .star svg{width:22px;height:22px;fill:var(--navy)}
+.float-badge b{font-family:var(--display);font-weight:900;font-size:1.05rem;display:block;line-height:1}
+.float-badge small{font-size:.74rem;color:var(--muted)}
+@keyframes bob{50%{transform:translateY(-12px)}}
+
+/* category pills */
+.pills{
+  position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+  margin-top:56px;padding-bottom:46px;
+}
+.pill{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;padding:18px 26px;font-family:var(--display);font-weight:700;
+  color:#fff;display:flex;align-items:center;gap:12px;transition:.25s;font-size:.98rem;
+}
+.pill svg{width:22px;height:22px;stroke:var(--cyan);flex:none}
+.pill:hover{background:rgba(255,255,255,.10);transform:translateY(-3px)}
+.pill.accent{background:var(--cyan);color:var(--navy);border-color:var(--cyan)}
+.pill.accent svg{stroke:var(--navy)}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--paper-2);border-bottom:1px solid var(--line)}
+.trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;
+  padding-top:26px;padding-bottom:26px}
+.trust-item{display:flex;align-items:center;gap:11px;font-family:var(--display);
+  font-weight:700;color:var(--navy);font-size:.96rem}
+.trust-item svg{width:24px;height:24px;stroke:var(--cyan)}
+
+/* ---------- section shell ---------- */
+section.block{padding:96px 0}
+.kicker{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.kicker.center{justify-content:center}
+h2{font-family:var(--display);font-weight:900;letter-spacing:-.02em;line-height:1.02;
+  font-size:clamp(2rem,3.6vw,3rem);color:var(--navy)}
+.sec-head{margin-bottom:54px}
+.sec-head.center{text-align:center;max-width:640px;margin-left:auto;margin-right:auto;margin-bottom:54px}
+.sec-head p{color:var(--muted);font-size:1.08rem;margin-top:16px}
+
+/* services cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:.3s ease;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(13,17,43,.12);border-color:transparent}
+.card-photo{
+  aspect-ratio:16/10;position:relative;display:flex;align-items:center;justify-content:center;
+  /* EDIT: set background-image:url('drains.jpg') etc on each card */
+  background:linear-gradient(150deg,var(--navy-2),var(--navy));
+}
+.card-photo .ic{width:64px;height:64px;stroke:var(--cyan);opacity:.85;stroke-width:1.4}
+.card-photo .num{position:absolute;left:16px;top:14px;font-family:var(--display);font-weight:900;
+  font-size:.85rem;color:rgba(255,255,255,.35)}
+.card-body{padding:26px 26px 30px;flex:1;display:flex;flex-direction:column}
+.card-body h3{font-family:var(--display);font-weight:800;font-size:1.32rem;color:var(--navy);margin-bottom:10px}
+.card-body p{color:var(--muted);font-size:.98rem;flex:1;margin-bottom:20px}
+.card-link{font-family:var(--display);font-weight:700;color:var(--navy);display:inline-flex;
+  align-items:center;gap:8px;font-size:.92rem}
+.card-link svg{width:18px;height:18px;stroke:var(--cyan);transition:.25s}
+.card:hover .card-link svg{transform:translateX(5px)}
+
+/* secondary services list */
+.more-services{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px 36px}
+.more-services li{list-style:none;display:flex;align-items:center;gap:12px;
+  padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--display);
+  font-weight:600;color:var(--navy)}
+.more-services li svg{width:20px;height:20px;stroke:var(--cyan);flex:none}
+
+/* ---------- why band ---------- */
+.why{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.why::before{content:"";position:absolute;inset:0;opacity:.5;
+  background:radial-gradient(600px 400px at 92% 50%,rgba(71,196,238,.18),transparent 60%)}
+.why .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why .big{font-family:var(--display);font-weight:900;font-size:clamp(3rem,7vw,5.5rem);
+  line-height:.9;letter-spacing:-.03em}
+.why .big em{font-style:normal;color:var(--cyan)}
+.why .sub{font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--cyan);margin-top:18px}
+.why p{color:#c8cfe0;margin-top:18px;font-size:1.05rem;max-width:30em}
+.why-list{display:grid;gap:18px}
+.why-list .row{display:flex;gap:16px;align-items:flex-start;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);
+  padding:22px;border-radius:14px;transition:.25s}
+.why-list .row:hover{background:rgba(255,255,255,.08)}
+.why-list .ico{width:48px;height:48px;border-radius:12px;background:var(--cyan);flex:none;
+  display:flex;align-items:center;justify-content:center}
+.why-list .ico svg{width:26px;height:26px;stroke:var(--navy);stroke-width:2}
+.why-list h4{font-family:var(--display);font-weight:800;font-size:1.1rem;margin-bottom:4px}
+.why-list p{margin:0;font-size:.95rem;color:#aeb6cc}
+
+/* ---------- areas ---------- */
+.areas .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.chip{background:var(--paper-2);border:1px solid var(--line);border-radius:100px;
+  padding:11px 20px;font-family:var(--display);font-weight:600;color:var(--navy);font-size:.95rem;
+  transition:.2s}
+.chip:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* ---------- contact / quote ---------- */
+.contact{background:var(--paper-2)}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.contact-info h2{margin-bottom:18px}
+.contact-info p{color:var(--muted);margin-bottom:30px;font-size:1.06rem}
+.cinfo-row{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.cinfo-row .ic{width:50px;height:50px;border-radius:13px;background:var(--navy);flex:none;
+  display:flex;align-items:center;justify-content:center}
+.cinfo-row .ic svg{width:24px;height:24px;stroke:var(--cyan)}
+.cinfo-row b{font-family:var(--display);font-weight:800;color:var(--navy);font-size:1.1rem;display:block;line-height:1.2}
+.cinfo-row span{color:var(--muted);font-size:.92rem}
+form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px;
+  box-shadow:0 30px 60px rgba(13,17,43,.07)}
+form h3{font-family:var(--display);font-weight:900;font-size:1.5rem;color:var(--navy);margin-bottom:6px}
+form .fhint{color:var(--muted);font-size:.92rem;margin-bottom:24px}
+.field{margin-bottom:16px}
+.field label{font-family:var(--display);font-weight:600;font-size:.85rem;color:var(--navy);
+  display:block;margin-bottom:7px}
+.field input,.field textarea,.field select{
+  width:100%;font-family:var(--body);font-size:1rem;padding:13px 15px;border:1.5px solid var(--line);
+  border-radius:11px;background:#fff;color:var(--ink);transition:.2s;
+}
+.field input:focus,.field textarea:focus,.field select:focus{
+  outline:none;border-color:var(--cyan);box-shadow:0 0 0 4px rgba(71,196,238,.15)}
+.field textarea{resize:vertical;min-height:96px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .btn{width:100%;justify-content:center;margin-top:8px}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy);color:#fff;padding:72px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.foot-grid p{color:#9aa2bc;margin-top:18px;font-size:.95rem;max-width:24em}
+.foot-grid h5{font-family:var(--display);font-weight:800;letter-spacing:.04em;font-size:.92rem;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
+.foot-grid ul{list-style:none;display:grid;gap:11px}
+.foot-grid li a{color:#c4cbe0;font-size:.95rem;transition:.2s}
+.foot-grid li a:hover{color:var(--cyan)}
+.socials{display:flex;gap:12px;margin-top:20px}
+.socials a{width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.07);
+  display:flex;align-items:center;justify-content:center;transition:.25s}
+.socials a:hover{background:var(--cyan)}
+.socials svg{width:20px;height:20px;stroke:#fff}
+.socials a:hover svg{stroke:var(--navy)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:26px;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  color:#8088a4;font-size:.86rem}
+.foot-bottom a{color:#8088a4}
+.foot-bottom a:hover{color:var(--cyan)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- hero load anim ---------- */
+.hl{opacity:0;transform:translateY(22px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hl-1{animation-delay:.05s}.hl-2{animation-delay:.18s}.hl-3{animation-delay:.30s}
+.hl-4{animation-delay:.42s}.hl-5{animation-delay:.55s}.hl-6{animation-delay:.7s}
+@keyframes up{to{opacity:1;transform:none}}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+  .navlinks,.nav-phone{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-photo{aspect-ratio:16/12;max-width:520px}
+  .float-badge{right:14px}
+  .pills{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr 1fr}
+  .more-services{grid-template-columns:1fr 1fr}
+  .why .wrap{grid-template-columns:1fr;gap:36px}
+  .contact .wrap{grid-template-columns:1fr;gap:36px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .wrap{padding:0 20px}
+  .pills{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .more-services{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .trust .wrap{justify-content:flex-start;gap:14px 26px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Blocked Up Plumbing home">
+      <img class="logo-h" src="data:image/png;base64,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" alt="Blocked Up Plumbing">
+    </a>
+
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#areas">Service areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:0416651552">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        0416 651 552
+      </a>
+      <a class="btn btn-cyan" href="#contact">Get a quote</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow hl hl-1">Licensed Plumbers · Sydney's North Shore</span>
+        <h1 class="hl hl-2">Plumbing you can <em>rely on.</em></h1>
+        <p class="lede hl hl-3">Blocked Up Plumbing are your local specialists, licensed across Sydney's north shore. From blocked drains to hot water, we take care of all your plumbing needs.</p>
+        <div class="hero-actions hl hl-4">
+          <a class="btn btn-cyan" href="#contact">Get a free quote</a>
+          <a class="btn btn-ghost" href="tel:0416651552">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            Call 0416 651 552
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo hl hl-5">
+        <!-- EDIT: replace the gradient background (in .hero-photo CSS) with a real photo of the team / a job -->
+        <div class="ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#47C4EE" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></svg>
+        </div>
+        <span class="photo-tag">Photo · team or job shot</span>
+        <div class="float-badge">
+          <div class="star"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></div>
+          <div><b>Local &amp; trusted</b><small>Licensed · fully insured</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- category pills -->
+    <div class="pills">
+      <a class="pill hl hl-3" href="#services">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 12h6l1.5-3 3 6L15 12h6"/></svg>
+        Blocked Drains</a>
+      <a class="pill hl hl-4" href="#services">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2s5 5 5 9a5 5 0 0 1-10 0c0-4 5-9 5-9Z"/></svg>
+        Hot Water</a>
+      <a class="pill hl hl-5" href="#services">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        Leak Detection</a>
+      <a class="pill accent hl hl-6" href="#contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+        Emergency 24/7</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; insured</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Upfront pricing</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Same day service</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>North Shore local</div>
+  </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="kicker center">What we do</div>
+      <h2>Plumbing services, done properly</h2>
+      <p>Whatever the job, we turn up on time, give you a straight answer and a fair price, and leave it sorted.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-photo">
+          <span class="num">01</span>
+          <!-- EDIT: add background-image of a drain / jetting job here -->
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h4V4M4 8a4 4 0 0 0 4 4h6a4 4 0 0 1 4 4v4M4 8v8a4 4 0 0 0 4 4h4"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>Blocked Drains &amp; CCTV</h3>
+          <p>High pressure water jetting and camera inspections to clear and diagnose blocked drains fast, with no guesswork.</p>
+          <a class="card-link" href="#contact">Book a plumber
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-photo">
+          <span class="num">02</span>
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s5 5 5 9a5 5 0 0 1-10 0c0-4 5-9 5-9Z"/><path d="M12 17a2 2 0 0 0 2-2"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>Hot Water Systems</h3>
+          <p>Repairs, replacements and new installs across gas, electric and continuous flow systems. Cold shower sorted same day.</p>
+          <a class="card-link" href="#contact">Book a plumber
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-photo">
+          <span class="num">03</span>
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v3l2 1"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>Leak Detection &amp; Burst Pipes</h3>
+          <p>Non invasive leak detection and rapid repairs that stop water damage before it spreads through your home.</p>
+          <a class="card-link" href="#contact">Book a plumber
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <!-- secondary services -->
+    <ul class="more-services reveal">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="m5 13 4 4L19 7"/></svg>Bathroom &amp; kitchen renovations</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="m5 13 4 4L19 7"/></svg>Gas fitting &amp; appliances</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="m5 13 4 4L19 7"/></svg>Tap, toilet &amp; cistern repairs</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="m5 13 4 4L19 7"/></svg>General maintenance</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="m5 13 4 4L19 7"/></svg>Backflow testing</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="m5 13 4 4L19 7"/></svg>Emergency plumbing</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="why block" id="why">
+  <div class="wrap">
+    <div class="why-left reveal">
+      <div class="kicker">Our promise</div>
+      <div class="big"><em>Reliable.</em></div>
+      <div class="sub">Quality Plumbing Specialists</div>
+      <p>New ownership, same trusted local service. We are here to take care of all of your plumbing needs across Sydney's north shore, the right way the first time.</p>
+    </div>
+    <div class="why-list reveal">
+      <div class="row">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><h4>On time, every time</h4><p>We respect your day. We turn up in the window we book and keep you posted.</p></div>
+      </div>
+      <div class="row">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div><h4>Upfront, honest pricing</h4><p>You get a clear price before we start. No surprises, no nasty invoices.</p></div>
+      </div>
+      <div class="row">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div><h4>Fully licensed &amp; insured</h4><p>Qualified, insured tradespeople and workmanship you can count on.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICE AREAS ================= -->
+<section class="block areas" id="areas">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Where we work</div>
+      <h2>Proudly serving Sydney's north shore</h2>
+      <div class="chips">
+        <span class="chip">Chatswood</span>
+        <span class="chip">Lane Cove</span>
+        <span class="chip">North Sydney</span>
+        <span class="chip">Mosman</span>
+        <span class="chip">Willoughby</span>
+        <span class="chip">Gordon</span>
+        <span class="chip">St Ives</span>
+        <span class="chip">Hornsby</span>
+        <span class="chip">Pymble</span>
+        <span class="chip">Crows Nest</span>
+        <span class="chip">+ surrounding suburbs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / QUOTE ================= -->
+<section class="block contact" id="contact">
+  <div class="wrap">
+    <div class="contact-info reveal">
+      <div class="kicker">Get in touch</div>
+      <h2>Need a plumber? Let's get it sorted.</h2>
+      <p>Send through a few details and we will get back to you with a quote, usually the same day. For urgent jobs, give us a call.</p>
+
+      <div class="cinfo-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+        <div><b>0416 651 552</b><span>Mon to Fri, plus emergency call outs</span></div>
+      </div>
+      <div class="cinfo-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
+        <div><b>hello@blockedupplumbing.com.au</b><span>EDIT: confirm the client's email</span></div>
+      </div>
+      <div class="cinfo-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><b>Sydney North Shore</b><span>Local, licensed and insured</span></div>
+      </div>
+    </div>
+
+    <!-- EDIT: form key — replace YOUR_WEB3FORMS_KEY with the client's Web3Forms access key -->
+    <form action="https://api.web3forms.com/submit" method="POST" class="reveal">
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+      <input type="hidden" name="subject" value="New quote request — Blocked Up Plumbing">
+      <input type="checkbox" name="botcheck" style="display:none">
+      <h3>Request a quote</h3>
+      <p class="fhint">We will get back to you, usually within the day.</p>
+      <div class="frow">
+        <div class="field"><label>Name</label><input type="text" name="name" required></div>
+        <div class="field"><label>Phone</label><input type="tel" name="phone" required></div>
+      </div>
+      <div class="frow">
+        <div class="field"><label>Suburb</label><input type="text" name="suburb"></div>
+        <div class="field"><label>Service</label>
+          <select name="service">
+            <option>Blocked drains</option>
+            <option>Hot water</option>
+            <option>Leak / burst pipe</option>
+            <option>Bathroom / renovation</option>
+            <option>Gas fitting</option>
+            <option>Emergency</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>What do you need done?</label><textarea name="message" placeholder="Tell us a bit about the job"></textarea></div>
+      <button type="submit" class="btn btn-cyan">Send my request</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand brand-stacked" href="#top">
+          <img class="logo-stacked" src="data:image/png;base64,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" alt="Blocked Up Plumbing">
+        </a>
+        <p>Your local plumbing specialists, licensed across Sydney's north shore. We are here to take care of all of your plumbing needs.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Google reviews"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Blocked drains</a></li>
+          <li><a href="#services">Hot water systems</a></li>
+          <li><a href="#services">Leak detection</a></li>
+          <li><a href="#services">Gas fitting</a></li>
+          <li><a href="#services">Emergency plumbing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">Why us</a></li>
+          <li><a href="#areas">Service areas</a></li>
+          <li><a href="#contact">Get a quote</a></li>
+          <li><a href="tel:0416651552">Call us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:0416651552">0416 651 552</a></li>
+          <li><a href="#contact">hello@blockedupplumbing.com.au</a></li>
+          <li>Sydney North Shore</li>
+          <li>Licence no. EDIT</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Blocked Up Plumbing. All rights reserved.</span>
+      <span>Website by <a href="https://theserviceedit.com">The Service Edit</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // sticky nav state
+  const hdr = document.getElementById('hdr');
+  const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 30);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // mobile menu (simple anchor scroll fallback)
+  const burger = document.getElementById('burger');
+  burger && burger.addEventListener('click', () => {
+    document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  });
+
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.14});
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = (i % 3) * 0.08 + 's';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
