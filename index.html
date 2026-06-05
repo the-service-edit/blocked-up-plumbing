@@ -3,8 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blocked Up Plumbing | Reliable Plumbers, Sydney North Shore</title>
-<meta name="description" content="Blocked Up Plumbing are your local plumbing specialists, licensed across Sydney's north shore. Blocked drains, hot water, leak detection and emergency plumbing. Call 0416 651 552.">
+<title>Blocked Up Plumbing | Emergency Plumbers Sydney North Shore</title>
+<meta name="description" content="Blocked drains, burst pipes, no hot water? Blocked Up Plumbing are your local Sydney north shore specialists. Fast response, upfront fixed pricing, available 24/7. Call 0416 651 552.">
+<!-- EDIT: confirm address, ABN/licence and review figures before going live -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Plumber",
+  "name":"Blocked Up Plumbing",
+  "image":"https://the-service-edit.github.io/blocked-up-plumbing/logo-stacked.png",
+  "telephone":"+61416651552",
+  "url":"https://the-service-edit.github.io/blocked-up-plumbing/",
+  "areaServed":"Sydney North Shore, NSW, Australia",
+  "address":{"@type":"PostalAddress","addressRegion":"NSW","addressCountry":"AU"},
+  "openingHours":"Mo-Su 00:00-23:59",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"150"}
+}
+
+  // quote modal (opens on CTA click only)
+  const modal = document.getElementById('quote');
+  const openModal = (e) => { if(e) e.preventDefault(); modal.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const closeModal = () => { modal.classList.remove('open'); document.body.style.overflow = ''; };
+  document.querySelectorAll('.js-quote').forEach(el => el.addEventListener('click', openModal));
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeModal));
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+</script>
 
 <!-- ============================================================
      BLOCKED UP PLUMBING  |  landing page
@@ -348,6 +371,74 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
   .foot-grid{grid-template-columns:1fr}
   .trust .wrap{justify-content:flex-start;gap:14px 26px}
 }
+
+/* ---------- hero note ---------- */
+.hero-note{font-family:var(--display);font-weight:600;font-size:.84rem;color:#8fb9cc;margin-top:4px}
+
+/* ---------- proof bar ---------- */
+.proof{background:var(--navy);border-top:1px solid rgba(255,255,255,.08)}
+.proof-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 34px;padding:22px 0}
+.proof-rating{display:flex;align-items:center;gap:13px}
+.proof .stars{display:flex;gap:2px}
+.proof .stars svg{width:19px;height:19px;fill:var(--cyan)}
+.proof-rating b,.proof-stat b{font-family:var(--display);font-weight:900;color:#fff;font-size:1.15rem;display:block;line-height:1.05}
+.proof-rating span,.proof-stat span{color:#9aa2bc;font-size:.82rem}
+.proof-stat{display:flex;flex-direction:column;gap:3px}
+
+/* ---------- recent jobs ---------- */
+.jobs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.job{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s ease}
+.job:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(13,17,43,.12);border-color:transparent}
+.job-photo{aspect-ratio:4/3;position:relative;display:flex;align-items:center;justify-content:center;
+  /* EDIT: set background-image:url('job-chatswood.jpg') etc */
+  background:linear-gradient(150deg,var(--navy-2),var(--navy))}
+.job-photo>svg{width:46px;height:46px;stroke:var(--cyan);opacity:.8;stroke-width:1.4}
+.job-loc{position:absolute;left:12px;top:12px;background:var(--cyan);color:var(--navy);
+  font-family:var(--display);font-weight:800;font-size:.72rem;padding:5px 10px;border-radius:8px;
+  display:flex;align-items:center;gap:5px}
+.job-loc svg{width:13px;height:13px;stroke:var(--navy);stroke-width:2}
+.job-body{padding:18px}
+.job-body h4{font-family:var(--display);font-weight:800;color:var(--navy);font-size:1.02rem;margin-bottom:5px}
+.job-body p{color:var(--muted);font-size:.88rem}
+
+/* ---------- quote modal ---------- */
+.modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(8,11,27,.72);backdrop-filter:blur(4px)}
+.modal-card{position:relative;background:#fff;border-radius:22px;max-width:740px;width:100%;
+  max-height:92vh;overflow:auto;box-shadow:0 40px 90px rgba(0,0,0,.5);animation:pop .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.modal-head{background:var(--navy);color:#fff;padding:26px 30px;position:relative}
+.modal-head .eyebrow{margin-bottom:10px}
+.modal-head h3{font-family:var(--display);font-weight:900;font-size:1.55rem;line-height:1.05}
+.modal-head p{color:#c8cfe0;font-size:.94rem;margin-top:8px;max-width:34em}
+.modal-close{position:absolute;right:18px;top:18px;width:38px;height:38px;border-radius:10px;border:none;
+  background:rgba(255,255,255,.12);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s}
+.modal-close:hover{background:rgba(255,255,255,.25)}
+.modal-close svg{width:20px;height:20px;stroke:#fff;stroke-width:2}
+.modal-body{display:grid;grid-template-columns:1fr 1fr}
+.modal-call{padding:30px;border-right:1px solid var(--line);background:var(--paper-2);
+  display:flex;flex-direction:column;justify-content:center;text-align:center}
+.modal-call .icon-circle{width:60px;height:60px;border-radius:50%;background:var(--cyan);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.modal-call .icon-circle svg{width:28px;height:28px;stroke:var(--navy);stroke-width:2}
+.modal-call .lbl{font-family:var(--display);font-weight:700;font-size:.74rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted)}
+.modal-call .big-call{font-family:var(--display);font-weight:900;font-size:1.7rem;color:var(--navy);
+  margin:6px 0 4px;display:block}
+.modal-call .sub{color:var(--muted);font-size:.88rem;margin-bottom:18px}
+.modal-call .btn{justify-content:center}
+.modal-form{padding:26px 30px}
+.modal-form h4{font-family:var(--display);font-weight:800;color:var(--navy);font-size:1.12rem;margin-bottom:4px}
+.modal-form .fhint{color:var(--muted);font-size:.86rem;margin-bottom:16px}
+.modal-form .field{margin-bottom:12px}
+.modal-form .btn{width:100%}
+@media(max-width:640px){
+  .modal-body{grid-template-columns:1fr}
+  .modal-call{border-right:none;border-bottom:1px solid var(--line);padding:24px}
+}
+@media(max-width:980px){.jobs-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.jobs-grid{grid-template-columns:1fr}.proof-inner{gap:14px 22px}.proof-stat b,.proof-rating b{font-size:1rem}}
 </style>
 </head>
 <body>
@@ -371,7 +462,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
         0416 651 552
       </a>
-      <a class="btn btn-cyan" href="#contact">Get a quote</a>
+      <a class="btn btn-cyan js-quote" href="#quote">Get a quote</a>
       <button class="burger" id="burger" aria-label="Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -384,16 +475,17 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow hl hl-1">Licensed Plumbers · Sydney's North Shore</span>
-        <h1 class="hl hl-2">Plumbing you can <em>rely on.</em></h1>
-        <p class="lede hl hl-3">Blocked Up Plumbing are your local specialists, licensed across Sydney's north shore. From blocked drains to hot water, we take care of all your plumbing needs.</p>
+        <span class="eyebrow hl hl-1">Emergency Plumbers · Sydney's North Shore</span>
+        <h1 class="hl hl-2">Blocked drain? Burst pipe? <em>We're on our way.</em></h1>
+        <p class="lede hl hl-3">Blocked Up Plumbing are your local north shore specialists. Fast response, upfront fixed pricing and guaranteed workmanship, day or night.</p>
         <div class="hero-actions hl hl-4">
-          <a class="btn btn-cyan" href="#contact">Get a free quote</a>
+          <a class="btn btn-cyan js-quote" href="#quote">Get a fast quote</a>
           <a class="btn btn-ghost" href="tel:0416651552">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
             Call 0416 651 552
           </a>
         </div>
+        <p class="hero-note hl hl-4">Available 24/7 for emergencies · No call out fee surprises</p>
       </div>
 
       <div class="hero-photo hl hl-5">
@@ -420,20 +512,24 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
       <a class="pill hl hl-5" href="#services">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
         Leak Detection</a>
-      <a class="pill accent hl hl-6" href="#contact">
+      <a class="pill accent hl hl-6 js-quote" href="#quote">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
         Emergency 24/7</a>
     </div>
   </div>
 </section>
 
-<!-- ================= TRUST STRIP ================= -->
-<div class="trust">
-  <div class="wrap">
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Licensed &amp; insured</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Upfront pricing</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Same day service</div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>North Shore local</div>
+<!-- ================= PROOF BAR (EDIT: confirm real figures) ================= -->
+<div class="proof">
+  <div class="wrap proof-inner">
+    <div class="proof-rating">
+      <div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></div>
+      <div><b>4.9 / 5</b><span>150+ Google reviews</span></div>
+    </div>
+    <div class="proof-stat"><b>20+ yrs</b><span>on the tools</span></div>
+    <div class="proof-stat"><b>24/7</b><span>emergency callouts</span></div>
+    <div class="proof-stat"><b>Same day</b><span>service available</span></div>
+    <div class="proof-stat"><b>Licensed</b><span>&amp; fully insured</span></div>
   </div>
 </div>
 
@@ -456,7 +552,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
         <div class="card-body">
           <h3>Blocked Drains &amp; CCTV</h3>
           <p>High pressure water jetting and camera inspections to clear and diagnose blocked drains fast, with no guesswork.</p>
-          <a class="card-link" href="#contact">Book a plumber
+          <a class="card-link js-quote" href="#quote">Book a plumber
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -469,7 +565,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
         <div class="card-body">
           <h3>Hot Water Systems</h3>
           <p>Repairs, replacements and new installs across gas, electric and continuous flow systems. Cold shower sorted same day.</p>
-          <a class="card-link" href="#contact">Book a plumber
+          <a class="card-link js-quote" href="#quote">Book a plumber
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -482,7 +578,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
         <div class="card-body">
           <h3>Leak Detection &amp; Burst Pipes</h3>
           <p>Non invasive leak detection and rapid repairs that stop water damage before it spreads through your home.</p>
-          <a class="card-link" href="#contact">Book a plumber
+          <a class="card-link js-quote" href="#quote">Book a plumber
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
@@ -526,6 +622,47 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
   </div>
 </section>
 
+<!-- ================= RECENT JOBS (EDIT: swap in real job photos + suburbs) ================= -->
+<section class="block jobs" id="jobs">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="kicker center">Recent jobs</div>
+      <h2>Work we have done nearby</h2>
+      <p>A snapshot of recent jobs across the north shore. Drop in real photos and these become your strongest proof.</p>
+    </div>
+    <div class="jobs-grid">
+      <article class="job reveal">
+        <div class="job-photo">
+          <span class="job-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Chatswood</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h4V4M4 8a4 4 0 0 0 4 4h6a4 4 0 0 1 4 4v4M4 8v8a4 4 0 0 0 4 4h4"/></svg>
+        </div>
+        <div class="job-body"><h4>Blocked sewer cleared</h4><p>High pressure jet cleared a fully blocked main, diagnosed on camera, sorted same day.</p></div>
+      </article>
+      <article class="job reveal">
+        <div class="job-photo">
+          <span class="job-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Mosman</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s5 5 5 9a5 5 0 0 1-10 0c0-4 5-9 5-9Z"/></svg>
+        </div>
+        <div class="job-body"><h4>Hot water replaced</h4><p>Failed electric unit swapped for a new continuous flow system. Back to hot showers by lunch.</p></div>
+      </article>
+      <article class="job reveal">
+        <div class="job-photo">
+          <span class="job-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Lane Cove</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+        <div class="job-body"><h4>Burst pipe repair</h4><p>Located and repaired a hidden wall leak before it caused major water damage.</p></div>
+      </article>
+      <article class="job reveal">
+        <div class="job-photo">
+          <span class="job-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>St Ives</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h6l1.5-3 3 6L15 12h6"/></svg>
+        </div>
+        <div class="job-body"><h4>Bathroom rough in</h4><p>Full rough in and fit off for a bathroom renovation, on time and on budget.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ================= SERVICE AREAS ================= -->
 <section class="block areas" id="areas">
   <div class="wrap">
@@ -559,7 +696,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
 
       <div class="cinfo-row">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
-        <div><b>0416 651 552</b><span>Mon to Fri, plus emergency call outs</span></div>
+        <div><b>0416 651 552</b><span>Available 24/7 for emergencies</span></div>
       </div>
       <div class="cinfo-row">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
@@ -679,5 +816,50 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
     io.observe(el);
   });
 </script>
+
+<!-- ================= QUOTE MODAL ================= -->
+<div class="modal" id="quote" role="dialog" aria-modal="true" aria-labelledby="qmTitle">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card">
+    <div class="modal-head">
+      <span class="eyebrow">Fast Response · Sydney's North Shore</span>
+      <h3 id="qmTitle">Need a plumber now?</h3>
+      <p>Call straight through for emergencies, or send a few details and we will get back to you fast.</p>
+      <button class="modal-close" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-call">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+        <span class="lbl">Call us now</span>
+        <a class="big-call" href="tel:0416651552">0416 651 552</a>
+        <span class="sub">Available 24/7 for emergencies</span>
+        <a class="btn btn-cyan" href="tel:0416651552"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call now</a>
+      </div>
+      <!-- EDIT: form key -->
+      <form class="modal-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+        <input type="hidden" name="subject" value="Quote request (popup) - Blocked Up Plumbing">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <h4>Request a fast quote</h4>
+        <p class="fhint">We will get back to you, usually within the hour.</p>
+        <div class="field"><label>Name</label><input type="text" name="name" required></div>
+        <div class="field"><label>Phone</label><input type="tel" name="phone" required></div>
+        <div class="field"><label>What is the problem?</label>
+          <select name="service">
+            <option>Blocked drain</option>
+            <option>Burst pipe or leak</option>
+            <option>No hot water</option>
+            <option>Overflowing toilet</option>
+            <option>Gas issue</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-cyan">Send my request</button>
+      </form>
+    </div>
+  </div>
+</div>
 </body>
 </html>
