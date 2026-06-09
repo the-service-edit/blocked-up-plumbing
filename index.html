@@ -436,6 +436,19 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
 }
 @media(max-width:980px){.jobs-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.jobs-grid{grid-template-columns:1fr}.proof-inner{gap:14px 22px}.proof-stat b,.proof-rating b{font-size:1rem}}
+
+/* ---------- sticky mobile call ---------- */
+.sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;
+  padding:12px 16px;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);
+  box-shadow:0 -8px 30px rgba(0,0,0,.3)}
+.sticky-call a{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--cyan);color:var(--navy);font-family:var(--display);font-weight:800;
+  font-size:1.1rem;padding:16px;border-radius:14px;text-decoration:none;transition:.2s}
+.sticky-call a:active{transform:scale(.97)}
+.sticky-call a svg{width:22px;height:22px;stroke:var(--navy);stroke-width:2.5;flex:none}
+@media(max-width:980px){.sticky-call{display:block}
+  .contact,.hero{padding-bottom:90px}
+  footer{padding-bottom:80px}}
 </style>
 </head>
 <body>
@@ -808,6 +821,12 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
     io.observe(el);
   });
 </script>
+
+
+<!-- ================= STICKY MOBILE CALL ================= -->
+<div class="sticky-call">
+  <a href="tel:0416651552"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> Call now</a>
+</div>
 
 <!-- ================= QUOTE MODAL ================= -->
 <div class="modal" id="quote" role="dialog" aria-modal="true" aria-labelledby="qmTitle">
