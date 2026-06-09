@@ -350,7 +350,9 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
   .navlinks,.nav-phone{display:none}
   .burger{display:flex}
   .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-photo{aspect-ratio:16/12;max-width:520px}
+  .hero-photo{aspect-ratio:16/10;max-width:none;width:calc(100% + 56px);margin-left:-28px;
+    margin-right:-28px;border-radius:0;border:none;box-shadow:none;filter:brightness(1.2)}
+  .float-badge{display:none}
   .float-badge{right:14px}
   .pills{grid-template-columns:repeat(2,1fr)}
   .cards{grid-template-columns:1fr 1fr}
@@ -361,6 +363,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
 }
 @media(max-width:600px){
   .wrap{padding:0 20px}
+  .hero-photo{width:calc(100% + 40px);margin-left:-20px;margin-right:-20px}
   .pills{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
   .more-services{grid-template-columns:1fr}
@@ -435,7 +438,9 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
   .modal-call{border-right:none;border-bottom:1px solid var(--line);padding:24px}
 }
 @media(max-width:980px){.jobs-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.jobs-grid{grid-template-columns:1fr}.proof-inner{gap:14px 22px}.proof-stat b,.proof-rating b{font-size:1rem}}
+@media(max-width:600px){.jobs-grid{grid-template-columns:1fr}.proof-inner{gap:14px 22px;justify-content:center;text-align:center;padding:18px 10px}
+  .proof-rating{width:100%;justify-content:center;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:4px}
+  .proof-stat b,.proof-rating b{font-size:1rem}}
 
 /* ---------- sticky mobile call ---------- */
 .sticky-call{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;
