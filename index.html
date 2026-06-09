@@ -17,7 +17,7 @@
   "areaServed":"Sydney North Shore, NSW, Australia",
   "address":{"@type":"PostalAddress","addressRegion":"NSW","addressCountry":"AU"},
   "openingHours":"Mo-Su 00:00-23:59",
-  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"150"}
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"7"}
 }
 
   // quote modal (opens on CTA click only)
@@ -454,6 +454,17 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
 @media(max-width:980px){.sticky-call{display:block}
   .contact,.hero{padding-bottom:90px}
   footer{padding-bottom:80px}}
+
+/* ---------- reviews ---------- */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;margin:0;
+  display:flex;flex-direction:column;transition:.3s ease}
+.rev:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(13,17,43,.10);border-color:transparent}
+.rev-stars{display:flex;gap:3px;margin-bottom:16px}
+.rev p{color:var(--ink);font-size:.98rem;line-height:1.65;flex:1;margin-bottom:18px;font-style:italic}
+.rev cite{display:flex;align-items:center;gap:8px;font-style:normal;font-family:var(--display);
+  font-weight:700;font-size:.88rem;color:var(--muted);padding-top:14px;border-top:1px solid var(--line)}
+@media(max-width:980px){.rev-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -534,7 +545,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
   <div class="wrap proof-inner">
     <div class="proof-rating">
       <div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></div>
-      <div><b>4.9 / 5</b><span>150+ Google reviews</span></div>
+      <div><b>5 / 5</b><span>7 five-star Facebook reviews</span></div>
     </div>
     <div class="proof-stat"><b>20+ yrs</b><span>on the tools</span></div>
     <div class="proof-stat"><b>24/7</b><span>emergency callouts</span></div>
@@ -628,43 +639,38 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
   </div>
 </section>
 
-<!-- ================= RECENT JOBS (EDIT: swap in real job photos + suburbs) ================= -->
-<section class="block jobs" id="jobs">
+<!-- ================= REVIEWS ================= -->
+<section class="block reviews" id="reviews">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <div class="kicker center">Recent jobs</div>
-      <h2>Work we have done nearby</h2>
-      <p>A snapshot of recent jobs across the north shore. Drop in real photos and these become your strongest proof.</p>
+      <div class="kicker center">Real reviews</div>
+      <h2>What our customers say</h2>
     </div>
-    <div class="jobs-grid">
-      <article class="job reveal">
-        <div class="job-photo">
-          <span class="job-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Chatswood</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h4V4M4 8a4 4 0 0 0 4 4h6a4 4 0 0 1 4 4v4M4 8v8a4 4 0 0 0 4 4h4"/></svg>
-        </div>
-        <div class="job-body"><h4>Blocked sewer cleared</h4><p>High pressure jet cleared a fully blocked main, diagnosed on camera, sorted same day.</p></div>
-      </article>
-      <article class="job reveal">
-        <div class="job-photo">
-          <span class="job-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Mosman</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s5 5 5 9a5 5 0 0 1-10 0c0-4 5-9 5-9Z"/></svg>
-        </div>
-        <div class="job-body"><h4>Hot water replaced</h4><p>Failed electric unit swapped for a new continuous flow system. Back to hot showers by lunch.</p></div>
-      </article>
-      <article class="job reveal">
-        <div class="job-photo">
-          <span class="job-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Lane Cove</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        </div>
-        <div class="job-body"><h4>Burst pipe repair</h4><p>Located and repaired a hidden wall leak before it caused major water damage.</p></div>
-      </article>
-      <article class="job reveal">
-        <div class="job-photo">
-          <span class="job-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>St Ives</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h6l1.5-3 3 6L15 12h6"/></svg>
-        </div>
-        <div class="job-body"><h4>Bathroom rough in</h4><p>Full rough in and fit off for a bathroom renovation, on time and on budget.</p></div>
-      </article>
+    <div class="rev-grid">
+      <blockquote class="rev reveal">
+        <div class="rev-stars"><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></div>
+        <p>We have used them many times and always provided with amazing service. Highly responsive to urgent problems, competent, reliable and most importantly, reasonable and affordable rates. Highly recommend Blocked Up Plumbing.</p>
+        <cite>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg>
+          Facebook Review
+        </cite>
+      </blockquote>
+      <blockquote class="rev reveal">
+        <div class="rev-stars"><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></div>
+        <p>We had a blocked drain, with raw sewerage gushing out. He came around straight away, 40 minutes after my first call, and sorted it all out. Thank you! Definitely recommended.</p>
+        <cite>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg>
+          Facebook Review
+        </cite>
+      </blockquote>
+      <blockquote class="rev reveal">
+        <div class="rev-stars"><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg><svg viewBox="0 0 24 24" fill="var(--cyan)" width="18" height="18"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></div>
+        <p>Blocked Up are wonderfully efficient and professional! I was amazed at how quickly and expertly he was able to install drainage in front of the house, get our downpipes feeding into the tanks, and the tanks pumping water back to the front of the house. Extremely timely, functional, and aesthetically great work!</p>
+        <cite>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg>
+          Facebook Review
+        </cite>
+      </blockquote>
     </div>
   </div>
 </section>
@@ -675,6 +681,9 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
     <div class="sec-head reveal">
       <div class="kicker">Where we work</div>
       <h2>Proudly serving Sydney's north shore</h2>
+      <div class="area-map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d106000!2d151.14!3d-33.78!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau" width="100%" height="340" style="border:0;border-radius:18px;display:block;margin-bottom:28px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Blocked Up Plumbing service area"></iframe>
+      </div>
       <div class="chips">
         <span class="chip">Chatswood</span>
         <span class="chip">Lane Cove</span>
@@ -704,10 +713,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
         <div><b>0416 651 552</b><span>Available 24/7 for emergencies</span></div>
       </div>
-      <div class="cinfo-row">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
-        <div><b>hello@blockedupplumbing.com.au</b><span>EDIT: confirm the client's email</span></div>
-      </div>
+
       <div class="cinfo-row">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <div><b>Sydney North Shore</b><span>Local, licensed and insured</span></div>
@@ -757,7 +763,7 @@ footer{background:var(--navy);color:#fff;padding:72px 0 30px}
         <div class="socials">
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="#" aria-label="Google reviews"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></a>
+          <a href="#" aria-label="Facebook reviews"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.8 5.9 20.4l1.5-6.8L2.2 9l6.9-.7L12 2z"/></svg></a>
         </div>
       </div>
       <div>
